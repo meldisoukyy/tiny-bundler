@@ -1,7 +1,7 @@
 const fs = require('fs');
 const parser = require('babylon');
 const traverse = require('babel-traverse').default;
-const {transformFromAst} = require('@babel/core');
+const { transformFromAst } = require('@babel/core');
 
 let ID = 0;
 
@@ -21,7 +21,7 @@ function createAsset(filepath) {
     }
   })
 
-  const code = transformFromAst(ast, null, {presets: ['@babel/preset-env']}).code;
+  const code = transformFromAst(ast, null, { presets: ['@babel/preset-env'] }).code;
 
   return {
     id,
@@ -31,4 +31,6 @@ function createAsset(filepath) {
   };
 }
 
-module.exports(createAsset);
+module.exports = {
+  createAsset
+};
