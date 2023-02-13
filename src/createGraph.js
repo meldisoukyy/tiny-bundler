@@ -1,8 +1,7 @@
 const path = require('path');
 const createAsset = require('./createAsset').createAsset;
 
-function createGraph(entryFile, queue) {
-  const entryAsset = createAsset(entryFile);
+function createGraph(entryAsset, queue) {
   entryAsset.mapping = {}
 
   queue.push(entryAsset);
@@ -13,7 +12,7 @@ function createGraph(entryFile, queue) {
 
     entryAsset.mapping[relativePath] = childAsset.id;
 
-    createGraph(childAsset.filepath, queue);
+    createGraph(childAsset, queue);
   });
 }
 
