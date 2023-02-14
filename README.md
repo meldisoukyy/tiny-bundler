@@ -15,15 +15,15 @@ git clone git@github.com:meldisoukyy/tiny-bundler.git
 cd tiny-bundler
 ```
 
-### How to run
-
-Firstly, you have to install dependencies
+Then, install dependencies.
 
 ```shell
 npm install
 ```
 
-Secondly, create a file called `bundle.config.json` .
+### Configurations
+
+Firstly, create a file called `bundle.config.json` .
 
 ```shell
 touch bundle.config.json
@@ -45,12 +45,6 @@ Your config file should have the following content.
 >
 > if output is not exists, the defauld output file will be `./dist/bundle.js` .
 
-And finally you can run our program
-
-```shell
-npm start
-```
-
 ### Try out the code
 
 Override `bundle.config.json` file with the following data:
@@ -65,7 +59,7 @@ Override `bundle.config.json` file with the following data:
 }
 ```
 
-After running the program with `npm start`, copy the content of `./dist/output.js` and run it in your browser console.
+Secondly run the program with `npm start`. Then copy the content of `./dist/output.js` and run it in your browser console.
 
 ### Additional Resources
 
