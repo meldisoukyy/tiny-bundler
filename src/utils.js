@@ -3,6 +3,7 @@ const path = require('path');
 const { exit } = require('process');
 
 const CONFIG_FILE = './bundle.config.json'
+const BASE_DIR = process.cwd()
 
 function getConfigContent(file) {
   const filePath = path.resolve(file);
@@ -71,7 +72,7 @@ function getOutput(config) {
   }
 
   config.output = {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(BASE_DIR, 'dist'),
     filename: 'bundle.js'
   }
   return config.output;
