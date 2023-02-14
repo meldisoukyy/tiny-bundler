@@ -1,6 +1,3 @@
-const createAsset = require('./createAsset').createAsset;
-const createGraph = require('./createGraph').createGraph;
-
 function getModules(graphQueue) {
   let modules = '';
 
@@ -34,8 +31,6 @@ function bundle(graphQueue) {
   return result
 }
 
-let queue = [];
-
-const entryAsset = createAsset('../example/entry.js');
-createGraph(entryAsset, queue);
-console.log(bundle(queue));
+module.exports = {
+  bundle
+}
