@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A tiny bundler for javascript. ",
   "author": "ElDisouky",
-  "scripts": {},
+  "scripts": {
+    "start": "node ./tbundler.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/meldisoukyy/tiny-bundler.git"
