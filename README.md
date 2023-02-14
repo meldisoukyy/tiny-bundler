@@ -23,8 +23,6 @@ Firstly, you have to install dependencies
 npm install
 ```
 
-
-
 Secondly, create a file called `bundle.config.json` .
 
 ```shell
@@ -47,13 +45,27 @@ Your config file should have the following content.
 >
 > if output is not exists, the defauld output file will be `./dist/bundle.js` .
 
-
-
 And finally you can run our program
 
 ```shell
 npm start
 ```
+
+### Try out the code
+
+Override `bundle.config.json` file with the following data:
+
+```json
+{
+	"entry": "./examples/about_author/entry.js",
+	"output": {
+		"path": "./dist",
+		"fileneame": "output.js"
+	}
+}
+```
+
+After running the program with `npm start`, copy the content of `./dist/output.js` and run it in your browser console.
 
 ### Additional Resources
 
