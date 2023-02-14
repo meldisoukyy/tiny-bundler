@@ -7,10 +7,10 @@ let queue = [];
 
 const configFile = utils.getConfigContent(utils.CONFIG_FILE)
 const config = utils.contentToJson(configFile);
-const target = utils.getTarget(config);
+const entry = utils.getEntry(config);
 const output = utils.getOutput(config);
 
-entryAssit = createAsset(target);
+entryAssit = createAsset(entry);
 createGraph(entryAssit, queue)
 
 const bundledData = bundle(queue)

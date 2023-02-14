@@ -40,16 +40,16 @@ function contentToJson(content) {
   return contentJSON
 }
 
-function getTarget(config) {
-  if (config.target) {
-    if (fs.existsSync(config.target)) {
-      return config.target
+function getEntry(config) {
+  if (config.entry) {
+    if (fs.existsSync(config.entry)) {
+      return config.entry
     }
-    console.error('Target File is not exists!');
+    console.error('Entry File is not exists!');
     exit(-1);
   }
 
-  console.error('Configuartion File does not have target attribute!');
+  console.error('Configuartion File does not have \'entry\' property!');
   exit(-1);
 }
 
@@ -92,7 +92,7 @@ module.exports = {
   CONFIG_FILE,
   getConfigContent,
   contentToJson,
-  getTarget,
+  getEntry,
   getOutput,
   createOutputfile
 }
