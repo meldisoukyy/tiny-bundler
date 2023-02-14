@@ -6,6 +6,55 @@
 
 The main purpose of this project is to explain how most bundlers work under the hood.
 
+### Installing
+
+Start by cloning this repo in your local machine then change you working directory to be in tiny-bundler.
+
+```shell
+git clone git@github.com:meldisoukyy/tiny-bundler.git
+cd tiny-bundler
+```
+
+### How to run
+
+Firstly, you have to install dependencies
+
+```shell
+npm install
+```
+
+
+
+Secondly, create a file called `bundle.config.json` .
+
+```shell
+touch bundle.config.json
+```
+
+Your config file should have the following content.
+
+```json
+{
+	"entry": "./path-to-your-entry-file",
+	"output": {
+		"path": "./path-to-your-output-dir",
+		"fileneame": "your-output-filename"
+	}
+}
+```
+
+> Note: you have to explicity mention your entry file, but adding output property is optional.
+>
+> if output is not exists, the defauld output file will be `./dist/bundle.js` .
+
+
+
+And finally you can run our program
+
+```shell
+npm start
+```
+
 ### Additional Resources
 
 These are some awesome resources that can help you to get more information:
